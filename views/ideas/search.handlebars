@@ -1,0 +1,31 @@
+ 
+
+<div class="card card-body">
+  <h3>Search Video Idea</h3>
+  <form action="/ideas/search" method="post">
+  
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" name="title" id="title" >
+    </div>
+ 
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+ 
+
+
+
+
+{{#each idea}}
+  <div class="card card-body mb-2">
+    <h4>{{title}}</h4>
+    <p>{{details}}</p>
+   
+  </div>
+{{else}}
+  <p>No video ideas listed</p>
+{{/each}}
+
+
+<p>{{count}}</p>
